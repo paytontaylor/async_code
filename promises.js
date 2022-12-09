@@ -85,7 +85,7 @@ function setup() {
         .then(res => {
             btn.onclick = function () {
                 let deck_id = res.deck_id
-                let cardData = axios.get(`https://deckofcardsapi.com/api/deck/${deck_id}/draw/?count=1`)
+                axios.get(`https://deckofcardsapi.com/api/deck/${deck_id}/draw/?count=1`)
                     .then(res => {
                         if (res.data.remaining === 0) {
                             btn.style.display = 'none'
